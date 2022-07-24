@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --purple: #755cde;
+  --orange: #f6a560;
+  --pink: #f39e9e;
+  --red: #eb7565;
+  --aqua: #61c4b7;
+  --magenta: #552049;
+  --black: #030303;
+  --gray: #7a746e;
+  --white: #fff7f0;
+
+  --ff-primary: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black);
+  font-family: var(--ff-primary);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/** Utility Classes **/
+.container {
+  max-width: min(90%, 110rem);
+  margin-inline: auto;
+}
+
+.text-lg {
+  font-size: 5.6rem;
+  line-height: 7rem;
+  font-weight: 700;
+}
+
+.text-md {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 700;
+}
+
+.text-sm {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+.text-p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  width: 22.8rem;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.25s ease-in-out;
+}
+
+.btn-black {
+  background-color: var(--black);
+}
+
+.btn-black:hover {
+  background-color: var(--purple);
+}
+
+.btn-red {
+  background-color: var(--red);
+}
+
+.btn-red:hover {
+  background-color: var(--orange);
+}
+
+.btn-purple {
+  background-color: var(--purple);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.4rem 0 6.6rem 0;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 2.3rem;
+}
+
+.hero p {
+  max-width: 73rem;
+  margin-inline: auto;
+  margin-bottom: 8rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 36rem 16rem 16rem 36rem;
+  grid-template-rows: 18rem 18rem;
+  grid-template-areas:
+    'purple orange pink aqua'
+    'purple red red magenta';
+}
+
+.hero-grid .box {
+  border-radius: 8px;
+  position: relative;
+}
+
+.box p,
+.box img {
+  position: absolute;
+}
+
+.hero-grid .box p {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.purple-box {
+  grid-area: purple;
+  background-color: var(--purple);
+}
+
+.purple-box img {
+  right: 2rem;
+  top: 2rem;
+}
+
+.purple-box p {
+  bottom: -6rem;
+  left: 2rem;
+}
+
+.orange-box {
+  grid-area: orange;
+  background-color: var(--orange);
+}
+
+.orange-box img,
+.pink-box img,
+.aqua-box img {
+  top: 2rem;
+}
+
+.red-box img,
+.magenta-box img {
+  top: 2rem;
+  right: 2rem;
+}
+
+.orange-box p,
+.pink-box p,
+.aqua-box p,
+.red-box p,
+.magenta-box p {
+  bottom: -6.5rem;
+  left: 2rem;
+}
+
+.pink-box {
+  grid-area: pink;
+  background-color: var(--pink);
+}
+
+.aqua-box {
+  grid-area: aqua;
+  background-color: var(--aqua);
+}
+
+.red-box {
+  grid-area: red;
+  background-color: var(--red);
+}
+
+.magenta-box {
+  grid-area: magenta;
+  background-color: var(--magenta);
+}
+
+.section-1 {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 8.8rem;
+}
+
+.section-1 .col {
+  flex: 1;
+}
+
+.col .text-p {
+  margin-block: 3.2rem;
+}
+
+.swiper-section {
+  padding-bottom: 8.8rem;
+  position: relative;
+}
+
+.swiper-section h2 {
+  margin-bottom: 5.6rem;
+  text-align: center;
+}
+
+.swiper {
+  width: 100vw;
+  height: 36rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.swiper-button-next {
+  right: 3.5rem !important;
+}
+
+.swiper-button-prev {
+  left: 3.5rem !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--white);
+}
+
+.cta-section {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+  background-color: var(--black);
+  color: var(--white);
+  margin-bottom: 5.6rem;
+  padding: 8rem 9.5rem 8rem 6.5rem;
+  border-radius: 10px;
+}
+
+.cta-section p {
+  color: var(--white);
+  max-width: 54rem;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6.4rem;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 768px) {
+  .hero-grid {
+    max-width: 69rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 18rem 18rem 18rem;
+    grid-template-areas:
+      'purple purple orange pink'
+      'purple purple red red'
+      'aqua aqua magenta magenta';
+  }
+
+  .orange-box img,
+  .pink-box img {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .section-1 {
+    gap: 5rem;
+  }
+
+  .cta-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    padding: 5.6rem 7.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .text-lg {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+  }
+
+  .text-md {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  .text-p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 18rem);
+    grid-template-areas:
+      'purple purple'
+      'purple purple'
+      'orange pink'
+      'red red'
+      'aqua aqua'
+      'magenta magenta';
+  }
+
+  .section-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-1 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  .section-1 .text-md,
+  .section-1 .text-p {
+    text-align: center;
+  }
+}
